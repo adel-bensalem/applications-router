@@ -1,7 +1,27 @@
 {
   "name": "applications-router",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./dist/main.js",
   "author": "adel.bensalem1 <adel.bensalem@augeo.org>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "node ./dist/main.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.9"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/express": "^4.17.12",
+    "@types/mongodb": "^3.6.17",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
 }
