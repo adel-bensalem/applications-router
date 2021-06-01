@@ -1,0 +1,7 @@
+{
+  "name": "applications-router",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "adel.bensalem1 <adel.bensalem@augeo.org>",
+  "license": "MIT"
+}
