@@ -17,11 +17,15 @@ const createProxy = (req: Request, res: Response): Proxy => ({
           .header(response.headers)
           .send(response.data);
       })
-      .catch(({ response }) => {
-        res
-          .status(response.status)
-          .header(response.headers)
-          .send(response.data);
+      .catch((error) => {
+        !!error.response
+          ? res
+              .status(error.response.status)
+              .header(error.response.headers)
+              .send(error.response.data)
+          : !!error.request
+          ? error.request.end()
+          : error;
       }),
 });
 
